@@ -12,7 +12,7 @@ export default MenuCard = ({ name, imageId, description }) => {
             {name}
           </h1>
 
-          <p className="text-wrap  text-ellipsis text-sm text-[#545454] mt-2">
+          <p className="text-wrap  text-ellipsis truncate text-sm text-[#545454] mt-2 ">
             {description}
           </p>
         </div>
