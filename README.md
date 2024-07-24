@@ -1,2 +1,0 @@
-# Foodfantacy
-Food Ordering App

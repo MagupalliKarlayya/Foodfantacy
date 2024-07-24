@@ -8,6 +8,7 @@ import { Fitlertheitems } from "../utils/filterdata.js";
 import GetResturants from "../utils/GetRestaurents.js";
 import Isonline from "./useIsoffline.js";
 import "../../index.css";
+
 const Body = () => {
   const [Searchitem, setSearchitem] = useState("");
   const [restSearch, setrestSearch] = useState("");
@@ -75,7 +76,7 @@ const Body = () => {
         </div>
       </div>
       <div className="h-[30px]"></div>
-      {filterrestaurant == 0 ? (
+      {filterrestaurant == undefined || filterrestaurant == 0 ? (
         <div className="flex flex-wrap justify-around items-center">
           <Loader />
         </div>

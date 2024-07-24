@@ -11,9 +11,8 @@ const GetResturants = () => {
 
   async function getresturants() {
     try {
-      const data = await fetch(
-        "https://cors-anywhere.herokuapp.com/https://www.swiggy.com/dapi/restaurants/list/v5?lat=20.27060&lng=85.83340&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
-      );
+      const apiUrl = process.env.REACT_APP_API_URL;
+      const data = await fetch(`${apiUrl}/swiggy`);
 
       // const jsondata = fetch(
 

@@ -13,9 +13,8 @@ const useRestItems = (id) => {
   }, [id]);
 
   async function extractitems() {
-    const data = await fetch(
-      `https://cors-anywhere.herokuapp.com/https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=20.27060&lng=85.83340&restaurantId=${id}&catalog_qa=undefined&submitAction=ENTER`
-    );
+    const apiUrl = process.env.REAST_APP_REST_API_URL;
+    const data = await fetch(`${apiUrl}/${id}`);
     const jsondata = await data.json();
     setitemsname(jsondata?.data);
   }
